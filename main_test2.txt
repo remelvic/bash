@@ -1,0 +1,15 @@
+start Nora nuzky
+add vrtacka
+start Vojta vrtacka
+add ohybacka
+start Otakar ohybacka
+add svarecka
+start Sofie svarecka
+add lakovna
+start Lucie lakovna
+add sroubovak
+start Stepan sroubovak
+add nuzky
+start Filip freza
+
+make A

@@ -1,14 +1,14 @@
 CFLAGS= -Wall -g -O2 -pthread
 EXTRA_CFLAGS= #-fsanitize=address -fno-omit-frame-pointer
-%.o: %.c
-	gcc -c -o $@ $< $(CFLAGS) $(EXTRA_CFLAGS)
-all: factory
+%.o: %.cpp
+	g++ -cpp -o $@ $< $(CFLAGS) $(EXTRA_CFLAGS)
+all: my_factory3
 
-factory: factory.o
-	gcc -o factory factory.c $(CFLAGS) $(EXTRA_CFLAGS)
+my_factory3: my_factory3.o
+	g++ -o my_factory3 my_factory3.cpp $(CFLAGS) $(EXTRA_CFLAGS)
 clean:
 	rm -f *.o
-	rm factory
+	rm factory3
 	rm osy06.tgz
 zip:
 	tar czf osy06.tgz Makefile *.[ch]
